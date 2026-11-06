@@ -1,6 +1,0 @@
-{
-  "name": "HeartBeat Home Health Care",
-  "description": "HeartBeat Home Health Care provides Long-Term Care and Skilled Home Health services in Tampa, FL, serving Hillsborough, Polk, Hardee, and Manatee counties. Bilingual agency (English & Spanish).",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}

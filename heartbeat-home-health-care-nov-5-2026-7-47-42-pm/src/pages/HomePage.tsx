@@ -126,44 +126,14 @@ export const HomePage: React.FC = () => {
                     </span>
                   </div>
 
-                  {/* Warm Patient-Care Visual Feature */}
-                  <div className="my-5 rounded-2xl bg-gradient-to-br from-[#FDF4F8] via-white to-[#E7F2F3] border border-[#F7D2E4] p-6 text-center relative overflow-hidden">
-                    <div className="relative z-10 space-y-3.5 py-1">
-                      <div className="w-16 h-16 rounded-2xl bg-white shadow-sm border border-slate-100 flex items-center justify-center mx-auto text-[#D90C72]">
-                        <Users className="w-8 h-8 text-[#126B72]" />
-                      </div>
-
-                      <div className="space-y-1.5">
-                        <span className="inline-block text-[11px] font-bold uppercase tracking-wider text-[#D90C72] bg-white px-3 py-0.5 rounded-full border border-[#F7D2E4] shadow-2xs">
-                          {language === 'en' ? 'Compassionate In-Home Care' : 'Atención Compasiva en el Hogar'}
-                        </span>
-                        <h4 className="text-lg font-bold text-[#126B72] font-heading">
-                          {language === 'en'
-                            ? 'Dedicated Clinicians & Caregivers'
-                            : 'Clínicos y Cuidadores Dedicados'}
-                        </h4>
-                        <p className="text-xs sm:text-sm text-[#5C707C] max-w-sm mx-auto leading-relaxed">
-                          {language === 'en'
-                            ? 'Providing personalized Long-Term Care, Skilled Nursing, and physical rehabilitation in the familiar comfort of your Florida home.'
-                            : 'Brindando Cuidado a Largo Plazo, Enfermería Especializada y rehabilitación física personalizada en la comodidad de su hogar en Florida.'}
-                        </p>
-                      </div>
-
-                      {/* Quick Credential Highlights */}
-                      <div className="pt-2 grid grid-cols-2 gap-2 text-left">
-                        <div className="bg-white rounded-xl p-2.5 border border-slate-100 shadow-2xs flex items-center gap-2">
-                          <ShieldCheck className="w-4 h-4 text-[#126B72] shrink-0" />
-                          <span className="text-[11px] font-semibold text-[#243A47]">ACHC Accredited</span>
-                        </div>
-                        <div className="bg-white rounded-xl p-2.5 border border-slate-100 shadow-2xs flex items-center gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-[#D90C72] shrink-0" />
-                          <span className="text-[11px] font-semibold text-[#243A47]">Bilingual (EN/ES)</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Bottom quick contact card */}
+                 {/* Warm Patient-Care Visual Feature */}
+<div className="my-5 rounded-2xl overflow-hidden border border-[#F7D2E4]">
+  <img
+    src="/assets/aistudio/ring hand.jpg"
+    alt="Caregiver assisting an older adult in the comfort of home"
+    className="w-full aspect-[4/3] object-cover object-center"
+  />
+</div>
                   <div className="pt-2 flex items-center justify-between text-xs gap-3">
                     <div className="space-y-0.5 text-left">
                       <p className="font-bold text-[#243A47]">

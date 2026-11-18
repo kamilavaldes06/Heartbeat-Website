@@ -419,42 +419,62 @@ export const CareersPage: React.FC = () => {
 
       {/* Main Career Intro & Form Container */}
       <section className="py-16 sm:py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Official Introduction Text */}
-          <div className="mb-12 space-y-4 text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FDF4F8] text-[#D90C72] text-xs font-bold uppercase tracking-wider font-heading">
-              <Briefcase className="w-3.5 h-3.5" />
-              <span>{language === 'en' ? 'Career Inquiries' : 'Oportunidades Laborales'}</span>
-            </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Official Introduction Text & Careers Photo */}
+<div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-12">
 
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#126B72] font-heading tracking-tight">
-              {language === 'en'
-                ? 'Join HeartBeat Home Health Care'
-                : 'Forme Parte de HeartBeat Home Health Care'}
-            </h2>
+  {/* Left: Careers Introduction */}
+  <div className="lg:col-span-7 space-y-4 text-left">
+    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FDF4F8] text-[#D90C72] text-xs font-bold uppercase tracking-wider font-heading">
+      <Briefcase className="w-3.5 h-3.5" />
+      <span>
+        {language === 'en' ? 'Career Inquiries' : 'Oportunidades Laborales'}
+      </span>
+    </div>
 
-            <p className="text-base text-[#243A47]/85 leading-relaxed font-body">
-              {language === 'en'
-                ? "Interested in joining HeartBeat Home Health Care? We welcome inquiries from Home Health Aides, Certified Nursing Assistants, and Registered Nurses interested in providing home healthcare services throughout our coverage areas. Complete the form below to tell us about yourself, your qualifications, and the communities you're available to serve."
-                : '¿Le interesa unirse a HeartBeat Home Health Care? Recibimos consultas de Asistentes de Salud en el Hogar, Asistentes de Enfermería Certificados y Enfermeros Registrados interesados en brindar atención domiciliaria en nuestras áreas de cobertura. Complete el siguiente formulario para contarnos sobre usted, sus calificaciones y las comunidades que tiene disponibilidad para atender.'}
-            </p>
+    <h2 className="text-2xl sm:text-3xl font-extrabold text-[#126B72] font-heading tracking-tight">
+      {language === 'en'
+        ? 'Join HeartBeat Home Health Care'
+        : 'Forme Parte de HeartBeat Home Health Care'}
+    </h2>
 
-            {/* Value Badges */}
-            <div className="pt-2 flex flex-wrap items-center gap-3 text-xs text-[#5C707C]">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FDF4F8] text-[#D90C72] font-semibold border border-[#F7D2E4]">
-                <Heart className="w-3.5 h-3.5 fill-[#D90C72]" />
-                {language === 'en' ? '...caring is our passion' : '...cuidar es nuestra pasión'}
-              </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#E7F2F3] text-[#126B72] font-semibold border border-[#126B72]/20">
-                <MapPin className="w-3.5 h-3.5" />
-                {language === 'en' ? 'Hillsborough · Polk · Hardee · Manatee' : 'Hillsborough · Polk · Hardee · Manatee'}
-              </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#EBF5F9] text-[#4D9BBC] font-semibold border border-[#4D9BBC]/30">
-                <Globe className="w-3.5 h-3.5" />
-                {language === 'en' ? 'Bilingual Culture (EN / ES / Creole)' : 'Cultura Bilingüe (EN / ES / Creole)'}
-              </span>
-            </div>
-          </div>
+    <p className="text-base text-[#243A47]/85 leading-relaxed font-body">
+      {language === 'en'
+        ? "Interested in joining HeartBeat Home Health Care? We welcome inquiries from Home Health Aides, Certified Nursing Assistants, and Registered Nurses interested in providing home healthcare services throughout our coverage areas. Complete the form below to tell us about yourself, your qualifications, and the communities you're available to serve."
+        : '¿Le interesa unirse a HeartBeat Home Health Care? Recibimos consultas de Asistentes de Salud en el Hogar, Asistentes de Enfermería Certificados y Enfermeros Registrados interesados en brindar atención domiciliaria en nuestras áreas de cobertura. Complete el siguiente formulario para contarnos sobre usted, sus calificaciones y las comunidades que tiene disponibilidad para atender.'}
+    </p>
+
+    {/* Value Badges */}
+    <div className="pt-2 flex flex-wrap items-center gap-3 text-xs text-[#5C707C]">
+      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FDF4F8] text-[#D90C72] font-semibold border border-[#F7D2E4]">
+        <Heart className="w-3.5 h-3.5 fill-[#D90C72]" />
+        {language === 'en' ? '...caring is our passion' : '...cuidar es nuestra pasión'}
+      </span>
+
+      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#E7F2F3] text-[#126B72] font-semibold border border-[#126B72]/20">
+        <MapPin className="w-3.5 h-3.5" />
+        Hillsborough · Polk · Hardee · Manatee
+      </span>
+
+      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#EBF5F9] text-[#4D9BBC] font-semibold border border-[#4D9BBC]/30">
+        <Globe className="w-3.5 h-3.5" />
+        {language === 'en'
+          ? 'Bilingual Culture (EN / ES / Creole)'
+          : 'Cultura Bilingüe (EN / ES / Creole)'}
+      </span>
+    </div>
+  </div>
+
+  {/* Right: Careers Photo */}
+  <div className="lg:col-span-5">
+    <img
+      src="/assets/aistudio/checking%20up.jpg"
+      alt="Home healthcare professional checking on an older adult"
+      className="w-full h-auto rounded-2xl"
+    />
+  </div>
+
+</div>
 
           {/* Form Card */}
           <div className="bg-[#FDF4F8] rounded-3xl p-6 sm:p-10 border border-[#F7D2E4] card-soft-shadow">

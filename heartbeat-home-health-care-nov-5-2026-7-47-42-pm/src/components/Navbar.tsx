@@ -94,11 +94,11 @@ export const Navbar: React.FC = () => {
             aria-label="HeartBeat Home Health Care Home"
           >
             <img
-              src="/logo.png"
-              alt="HeartBeat Home Health Care"
-              className="h-10 sm:h-12 lg:h-14 w-auto max-w-[130px] sm:max-w-none object-contain"
-              loading="eager"
-            />
+  src="/logo.png"
+  alt="HeartBeat Home Health Care"
+  className="block w-auto h-auto max-h-[52px] sm:max-h-[60px] lg:max-h-[64px] max-w-[145px] sm:max-w-[170px] lg:max-w-[185px] object-contain"
+  loading="eager"
+/>
           </Link>
 
           {/* Desktop Navigation Links */}

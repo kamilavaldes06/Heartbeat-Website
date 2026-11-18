@@ -124,7 +124,7 @@ export const ServicesPage: React.FC = () => {
         <img
           src="/assets/aistudio/pressure.jpg"
           alt="Home healthcare professional checking an older adult's blood pressure"
-          className="w-full aspect-[4/3] object-cover object-center rounded-2xl"
+          className="w-full h-auto rounded-2xl"
         />
       </div>
 

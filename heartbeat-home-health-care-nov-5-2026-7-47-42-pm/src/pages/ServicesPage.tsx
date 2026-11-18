@@ -45,74 +45,93 @@ export const ServicesPage: React.FC = () => {
         categoryTag={language === 'en' ? 'Comprehensive Care' : 'Atención Integral'}
       />
 
-      {/* Main Services Introduction & Category Selector */}
-      <section className="py-12 bg-white border-b border-slate-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Introductory Paragraph directly beneath heading */}
-          <div className="max-w-3xl space-y-4 mb-8">
-            <p className="text-base sm:text-lg text-[#243A47]/85 leading-relaxed font-body">
-              {language === 'en'
-                ? 'Whether you are seeking compassionate daily living assistance to help an aging parent remain safely at home, or specialized clinical rehabilitation following a surgery or medical event, HeartBeat Home Health Care offers a structured continuum of care. All skilled services are coordinated under physician orders and tailored to each client’s unique clinical and personal requirements.'
-                : 'Ya sea que busque asistencia diaria compasiva para que un ser querido permanezca seguro en casa, o rehabilitación clínica especializada tras una cirugía o evento médico, HeartBeat Home Health Care ofrece un continuo de atención integral. Todos los servicios clínicos se coordinan bajo órdenes médicas y se adaptan a las necesidades individuales.'}
-            </p>
-            <p className="text-xs text-[#5C707C] italic">
-              {language === 'en'
-                ? '* Note: Service descriptions reflect general agency offerings and are subject to physician orders, care plan authorization, and clinical evaluation.'
-                : '* Nota: Las descripciones de servicios reflejan la oferta general de la agencia y están sujetas a órdenes médicas, autorización de plan de cuidados y evaluación clínica.'}
-            </p>
-          </div>
+      
+{/* Main Services Introduction & Category Selector */}
+<section className="py-12 bg-white border-b border-slate-100">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
-          {/* Interactive Category Filter Tabs */}
-          <div className="flex flex-wrap items-center gap-2 p-1.5 bg-[#FDF4F8] rounded-xl border border-[#F7D2E4] w-fit">
-            <button
-              type="button"
-              onClick={() => setActiveCategory('all')}
-              className={`px-4 py-2 text-xs font-bold rounded-lg transition-all ${
-                activeCategory === 'all'
-                  ? 'bg-white text-[#126B72] shadow-xs'
-                  : 'text-[#5C707C] hover:text-[#243A47]'
-              }`}
-            >
-              {language === 'en' ? 'All Services' : 'Todos los Servicios'}
-            </button>
-            <button
-              type="button"
-              onClick={() => setActiveCategory('ltc')}
-              className={`px-4 py-2 text-xs font-bold rounded-lg transition-all ${
-                activeCategory === 'ltc'
-                  ? 'bg-white text-[#D90C72] shadow-xs'
-                  : 'text-[#5C707C] hover:text-[#243A47]'
-              }`}
-            >
-              {language === 'en' ? 'Long-Term Care (LTC)' : 'Cuidado a Largo Plazo'}
-            </button>
-            <button
-              type="button"
-              onClick={() => setActiveCategory('skilled')}
-              className={`px-4 py-2 text-xs font-bold rounded-lg transition-all ${
-                activeCategory === 'skilled'
-                  ? 'bg-white text-[#126B72] shadow-xs'
-                  : 'text-[#5C707C] hover:text-[#243A47]'
-              }`}
-            >
-              {language === 'en' ? 'Skilled Home Health' : 'Salud Especializada'}
-            </button>
-            <button
-              type="button"
-              onClick={() => setActiveCategory('pediatric')}
-              className={`px-4 py-2 text-xs font-bold rounded-lg transition-all ${
-                activeCategory === 'pediatric'
-                  ? 'bg-white text-[#4D9BBC] shadow-xs'
-                  : 'text-[#5C707C] hover:text-[#243A47]'
-              }`}
-            >
-              {language === 'en' ? 'Pediatric Services' : 'Servicios Pediátricos'}
-            </button>
-          </div>
+      {/* Left: Introduction and Service Selection */}
+      <div className="lg:col-span-7 space-y-6">
+        <div className="space-y-4">
+          <p className="text-base sm:text-lg text-[#243A47]/85 leading-relaxed font-body">
+            {language === 'en'
+              ? 'Whether you are seeking compassionate daily living assistance to help an aging parent remain safely at home, or specialized clinical rehabilitation following a surgery or medical event, HeartBeat Home Health Care offers a structured continuum of care. All skilled services are coordinated under physician orders and tailored to each client’s unique clinical and personal requirements.'
+              : 'Ya sea que busque asistencia diaria compasiva para que un ser querido permanezca seguro en casa, o rehabilitación clínica especializada tras una cirugía o evento médico, HeartBeat Home Health Care ofrece un continuo de atención integral. Todos los servicios clínicos se coordinan bajo órdenes médicas y se adaptan a las necesidades individuales.'}
+          </p>
+
+          <p className="text-xs text-[#5C707C] italic">
+            {language === 'en'
+              ? '* Note: Service descriptions reflect general agency offerings and are subject to physician orders, care plan authorization, and clinical evaluation.'
+              : '* Nota: Las descripciones de servicios reflejan la oferta general de la agencia y están sujetas a órdenes médicas, autorización de plan de cuidados y evaluación clínica.'}
+          </p>
         </div>
-      </section>
 
-      {/* 1. LONG-TERM CARE SERVICES SECTION */}
+        {/* Interactive Category Filter Tabs */}
+        <div className="flex flex-wrap items-center gap-2 p-1.5 bg-[#FDF4F8] rounded-xl border border-[#F7D2E4] w-fit">
+          <button
+            type="button"
+            onClick={() => setActiveCategory('all')}
+            className={`px-4 py-2 text-xs font-bold rounded-lg transition-all ${
+              activeCategory === 'all'
+                ? 'bg-white text-[#126B72] shadow-xs'
+                : 'text-[#5C707C] hover:text-[#243A47]'
+            }`}
+          >
+            {language === 'en' ? 'All Services' : 'Todos los Servicios'}
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setActiveCategory('ltc')}
+            className={`px-4 py-2 text-xs font-bold rounded-lg transition-all ${
+              activeCategory === 'ltc'
+                ? 'bg-white text-[#D90C72] shadow-xs'
+                : 'text-[#5C707C] hover:text-[#243A47]'
+            }`}
+          >
+            {language === 'en' ? 'Long-Term Care (LTC)' : 'Cuidado a Largo Plazo'}
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setActiveCategory('skilled')}
+            className={`px-4 py-2 text-xs font-bold rounded-lg transition-all ${
+              activeCategory === 'skilled'
+                ? 'bg-white text-[#126B72] shadow-xs'
+                : 'text-[#5C707C] hover:text-[#243A47]'
+            }`}
+          >
+            {language === 'en' ? 'Skilled Home Health' : 'Salud Especializada'}
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setActiveCategory('pediatric')}
+            className={`px-4 py-2 text-xs font-bold rounded-lg transition-all ${
+              activeCategory === 'pediatric'
+                ? 'bg-white text-[#4D9BBC] shadow-xs'
+                : 'text-[#5C707C] hover:text-[#243A47]'
+            }`}
+          >
+            {language === 'en' ? 'Pediatric Services' : 'Servicios Pediátricos'}
+          </button>
+        </div>
+      </div>
+
+      {/* Right: Services Photo */}
+      <div className="lg:col-span-5">
+        <img
+          src="/assets/aistudio/pressure.jpg"
+          alt="Home healthcare professional checking an older adult's blood pressure"
+          className="w-full aspect-[4/3] object-cover object-center rounded-2xl"
+        />
+      </div>
+
+    </div>
+  </div>
+</section>
+
       {(activeCategory === 'all' || activeCategory === 'ltc') && (
         <section id="ltc" className="py-16 sm:py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

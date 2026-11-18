@@ -129,7 +129,7 @@ export const HomePage: React.FC = () => {
                  {/* Warm Patient-Care Visual Feature */}
 <div className="my-5 rounded-2xl overflow-hidden border border-[#F7D2E4]">
   <img
-    src="/assets/aistudio/ring hand.jpg"
+    src="/assets/aistudio/ring%20hand.jpg"
     alt="Caregiver assisting an older adult in the comfort of home"
     className="w-full aspect-[4/3] object-cover object-center"
   />
